@@ -1,0 +1,23 @@
+@import url('./assets/css/reset.css');
+@import url('./assets/css/fonts.css');
+@import url('./assets/css/colors.css');
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-content {
+  box-sizing: border-box;
+  /*background-color: #282c34;*/
+}
+
+strong {
+  font-weight: 700;
+}
+
+

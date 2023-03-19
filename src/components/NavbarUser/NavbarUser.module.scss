@@ -1,0 +1,76 @@
+.loginButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.loginButton img {
+    width: 20px;
+    height: 20px;
+}
+
+.loginButton p {
+    text-decoration: none;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: black;
+    margin: 0;
+}
+
+
+.navbarUser {
+    width: 100%;
+    max-width: 130px;
+    position: relative;
+}
+
+.navbarUser__loggedUser {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.navbarUser__loggedUser img {
+    width: 15px;
+}
+
+.navbarUser__dropdown {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: -65px;
+    right: 0px;
+    background-color: var(--grey-light);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.navbarUser__dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbarUser__dropdown ul li {
+    display: flex;
+}
+
+.navbarUser__dropdown ul li button,
+.navbarUser__dropdown ul li img {
+    cursor: pointer;
+}
+
+.navbarUser__dropdown button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.navbarUser__dropdownShow {
+    display: block;
+}

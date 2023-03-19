@@ -1,0 +1,33 @@
+@import '../../assets/css/mixins.scss';
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.login__formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.login__formGroup:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.login__formGroup label {
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.login__formGroup button {
+    @include button;
+
+    margin: auto;
+}

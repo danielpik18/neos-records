@@ -1,0 +1,16 @@
+@mixin button($backgrounColor: var(--blue-light), $color: #FFFFFF, $maxWidth: 200px, $height: 36px) {
+    border: none;
+    outline: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $height;
+    border-radius: 4px;
+    background-color: $backgrounColor;
+    color: $color;
+    max-width: $maxWidth;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
