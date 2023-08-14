@@ -16,23 +16,43 @@
 
 .register__formGroup {
     @include formGroup;
+
+    & > label {
+        @include formLabel;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    & button {
+        @include button;
+    
+        margin: auto;
+    }
+
+    & > input {
+        @include textInput;
+    }
 }
 
-.register__formGroup:not(:last-child) {
-    margin-bottom: 15px;
+.register__radioButtons {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    gap: 20px;
 }
 
-.register__formGroup label {
-    @include formLabel;
-}
+.register__radioGroup {
+    display: flex;
+    align-items: center;
 
+    & label,
+    & input {
+        cursor: pointer;
+    }
 
-.register__formGroup button {
-    @include button;
-
-    margin: auto;
-}
-
-.register__formGroup input {
-    @include textInput;
+    & label {
+        font-size: 14px;
+    }
 }

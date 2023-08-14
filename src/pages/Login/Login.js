@@ -21,22 +21,13 @@ const Login = () => {
 
         const res = await login(emailInput.current.value, passwordInput.current.value);
 
-        if(res?.error) return toast.error(res.error, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
+        if(res?.error) return toast.error(res.error);
 
         const user = jwt_decode(res.accessToken);
 
         console.log('login USER:', user);
 
-        if (!user) return toast('Unexpected error.')
+        if (!user) return toast.error('Unexpected error.')
         
         setUser(user);
         navigate(-1)

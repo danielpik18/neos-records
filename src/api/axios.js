@@ -45,13 +45,14 @@ export const login = async (email, password) => {
     }
 }
 
-export const register = async (name, lastname, email, password) => {
+export const register = async (name, lastname, email, password, role) => {
     try {
         const res = await api.post(`/auth/register`, {
             name,
             lastname,
             email,
-            password
+            password,
+            role
         }, {withCredentials: true})
 
         console.log('Register res:', res);

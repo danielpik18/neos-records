@@ -68,6 +68,11 @@ function App() {
             path='/my-account'
             element={user ? <MyAccount /> : <Navigate to='/login' />}
           />
+
+          <Route
+            path='*'
+            element={<Home />}
+          />
         </Routes>
 
         <Footer />
