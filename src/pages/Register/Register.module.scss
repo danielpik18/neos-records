@@ -1,0 +1,38 @@
+@import '../../assets/css/mixins.scss';
+
+.register {
+    padding: 60px 0;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto 20px auto;
+    border-radius: 8px;
+}
+
+.register__formGroup {
+    @include formGroup;
+}
+
+.register__formGroup:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.register__formGroup label {
+    @include formLabel;
+}
+
+
+.register__formGroup button {
+    @include button;
+
+    margin: auto;
+}
+
+.register__formGroup input {
+    @include textInput;
+}

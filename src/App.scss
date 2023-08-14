@@ -1,7 +1,13 @@
 @import url('./assets/css/reset.css');
 @import url('./assets/css/fonts.css');
 @import url('./assets/css/colors.css');
+@import url('./assets/css/animations.scss');
+@import url('./assets/css/reusable.scss');
 
+
+html, body {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -9,15 +15,13 @@ body {
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-content {
   box-sizing: border-box;
   /*background-color: #282c34;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
-strong {
-  font-weight: 700;
-}
-
-

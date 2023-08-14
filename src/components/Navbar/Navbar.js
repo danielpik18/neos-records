@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import NavbarUser from "../NavbarUser/NavbarUser";
 import styles from './Navbar.module.css';
 
@@ -30,13 +30,14 @@ const Navbar = () => {
     const navbarLinks = listItems.map(listItem => {
         return (
             <li className={`${listItem.name === 'Login' ? styles.navbar__login : ''}`}  key={listItem.path}>
-                <Link to={listItem.path} >
+                <NavLink to={listItem.path} end className={({ isActive, isPending }) =>
+                    isPending ? styles.navbar__linkPending : isActive ? styles.navbar__linkActive : ""
+                } >
 
-                    <img className={styles.navbar__listItemIcon} src={require(`./img/${listItem.icon}`)} alt='test' />
+                    <img className={styles.navbar__listItemIcon} src={require(`./img/${listItem.icon}`)} alt='icon' />
                     <p>{listItem.name}</p>
 
-
-                </Link>
+                </NavLink>
             </li>
         )
     })
@@ -44,7 +45,12 @@ const Navbar = () => {
 
     return (
         <div className={styles.navbar}>
-            <Link to={'/'}><h1>NEOS Records</h1></Link>
+            <Link to={'/'}>
+                <img
+                    src={require(`./img/neos-records-logo.png`)}
+                    alt='neos-records-logo'
+                    className={styles.navbar__logo} />
+            </Link>
 
             <ul className={styles.navbar__links}>
                 {navbarLinks}

@@ -1,15 +1,24 @@
 .myAccount {
-
+    padding: 60px 0;
+    min-height: 370px;
 }
 
 .myAccount__info {
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    text-align: left;
+    margin-top: 40px;
+    gap: 40px 100px;
 }
 
 .myAccount__infoBlock {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+}
+
+.myAccount__infoBlock strong {
+    display: block;
+    text-transform: uppercase;
 }

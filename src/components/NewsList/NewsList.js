@@ -40,9 +40,22 @@ const NewsList = () => {
         })
     ;
 
+    const resetNewsItemsOpacity = () => {
+        const newsListChildren = document.getElementById('newsList').children;
+
+        for (let i = 0; i < newsListChildren.length; i++) {
+            if(newsListChildren[i].classList.contains('newsItem--not-hovered')) {
+                newsListChildren[i].classList.remove('newsItem--not-hovered');
+            }
+        };
+    }
+
     return (
-        <div className={styles.newsList}>
-            <h1>News</h1>
+        <div
+            id="newsList"
+            className={styles.newsList}
+            onMouseLeave={resetNewsItemsOpacity}
+        >
             {content}
         </div>
     )

@@ -1,20 +1,26 @@
-@import '../../assets/css/mixins.scss';
+@import 'assets/css/mixins.scss';
+
+.login {
+    padding: 60px 0;
+}
+
+.login h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
 
 .login form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 900px;
-    margin: auto;
-    margin-bottom: 20px;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto 20px auto;
+    border-radius: 8px;
 }
 
 .login__formGroup {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
+    @include formGroup;
 }
 
 .login__formGroup:not(:last-child) {
@@ -22,12 +28,34 @@
 }
 
 .login__formGroup label {
-    text-align: left;
-    margin-bottom: 6px;
+    @include formLabel;
 }
+
 
 .login__formGroup button {
     @include button;
 
     margin: auto;
+}
+
+.login__formGroup input {
+    @include textInput;
+}
+
+.login__registerButton {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--caribbean-current);
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: -.5px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.login__registerButton:hover {
+    opacity: .85;
+    text-decoration: underline;
 }

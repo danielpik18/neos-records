@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--night);
+    color: var(--antiflash-white);
+    margin-top: auto;
+    font-size: 11px;
+}
+
+.footer__copy {
+    max-width: 750px;
+    margin: 20px 0;
+}
+
+.footer__logo {
+    max-width: 85px;
+}

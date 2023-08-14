@@ -1,0 +1,19 @@
+.aboutUs  {
+    padding: 60px;
+    min-height: 700px;
+    height: calc(100vh - 270px);
+    background: linear-gradient(145deg, rgba(240, 237, 238, .9), rgba(255, 255, 255, .9)), url('./img/BG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.aboutUs__text :global {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 900px;
+    margin-top: 20px;
+    text-align: left;
+
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}

@@ -4,8 +4,17 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 15px 20px;
-    margin-bottom: 40px;
+    padding: 10px 20px;
+    background-color: var(--antiflash-white);
+    min-height: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__logo {
+    width: 100%;
+    max-width: 85px;
 }
 
 .navbar h1 {
@@ -27,11 +36,21 @@
 
 .navbar__links a {
     text-decoration: none;
-    color: black;
+    color: var(--night);
+    transition: all .1s ease-in-out;
+    opacity: .75;
+}
+
+.navbar__links li a:hover {
+    text-decoration: underline;
+}
+
+a.navbar__linkActive {
+    opacity: 1;
+    font-weight: 600;
 }
 
 .navbar__links li a {
-    text-decoration: none;
     width: 100%;
     display: flex;
     align-items: center;

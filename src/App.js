@@ -7,17 +7,18 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 
 /* PAGES */
-import Home from './pages/Home/Home';
-import AboutUs from './pages/AboutUs/AboutUs';
-import Contact from './pages/Contact/Contact';
-import News from './pages/News/News';
-import MyAccount from './pages/MyAccount/MyAccount';
-import NewsItemDetails from './pages/NewsItemDetails/NewsItemDetails';
-import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
+import Home from 'pages/Home/Home';
+import AboutUs from 'pages/AboutUs/AboutUs';
+import Contact from 'pages/Contact/Contact';
+import News from 'pages/News/News';
+import MyAccount from 'pages/MyAccount/MyAccount';
+import NewsItemDetails from 'pages/NewsItemDetails/NewsItemDetails';
+import Login from 'pages/Login/Login';
+import Register from 'pages/Register/Register';
 
 /* COMPONENTS */
-import Navbar from './components/Navbar/Navbar';
+import Navbar from 'components/Navbar/Navbar';
+import Footer from 'components/Footer/Footer';
 
 function App() {
 
@@ -36,7 +37,9 @@ function App() {
 
           <Route
             path='/news'
-            element={user ? <News /> : <Navigate to='/login' />}>
+            //element={user ? <News /> : <Navigate to='/login' />}
+            element={<News />}
+          >
           </Route>
 
           <Route path='news/:id' element={<NewsItemDetails/>} />
@@ -53,7 +56,7 @@ function App() {
 
           <Route
             path='/login'
-            element={<Login />}
+            element={!user ? <Login /> : <Navigate to='/' />}
           />
           
           <Route
@@ -66,6 +69,8 @@ function App() {
             element={user ? <MyAccount /> : <Navigate to='/login' />}
           />
         </Routes>
+
+        <Footer />
       </section>
     </div>
   );

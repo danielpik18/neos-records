@@ -28,6 +28,7 @@ const NavbarUser = () => {
         ?
         <div className={styles.navbarUser}>
             <div className={styles.navbarUser__loggedUser} onClick={() => setShowDropdown(!showDropdown)}>
+                <img src={require('./img/user-svgrepo-com.svg').default} alt='test' />
                 <p>{user.name}</p>
                 <img src={require('./img/arrow-down-svgrepo-com.svg').default} alt='test' />
             </div>
@@ -35,13 +36,13 @@ const NavbarUser = () => {
             <div className={`${styles.navbarUser__dropdown} ${showDropdown ? styles.navbarUser__dropdownShow : ''}`}>
                 <ul>
                     <li>
-                        <img src={require('./img/arrow-right-svgrepo-com.svg').default} alt='test' />
+                        <img src={require('./img/arrow-right.svg').default} alt='test' />
                         <Link to='/my-account'>
                             <button>My account</button>
                         </Link>
                     </li>
                     <li>
-                        <img src={require('./img/arrow-right-svgrepo-com.svg').default} alt='test' />
+                        <img src={require('./img/arrow-right.svg').default} alt='test' />
                         <button onClick={handleLogout}>Logout</button>
                     </li>
                 </ul>

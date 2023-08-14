@@ -1,4 +1,4 @@
-@mixin button($backgrounColor: var(--blue-light), $color: #FFFFFF, $maxWidth: 200px, $height: 36px) {
+@mixin button($backgrounColor: var(--caribbean-current), $color: var(--antiflash-white), $maxWidth: 150px, $height: 36px) {
     border: none;
     outline: none;
     width: 100%;
@@ -13,4 +13,35 @@
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    font-family: 'Source Sans 3', sans-serif;
+    text-transform: uppercase;
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+@mixin formGroup() {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+}
+
+@mixin formLabel() {
+    text-align: left;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@mixin textInput() {
+    height: 30px;
+    width: 100%;
+    padding: 2px 6px;
+    background-color : #FFFFFF; 
 }

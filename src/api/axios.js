@@ -43,8 +43,28 @@ export const login = async (email, password) => {
         console.log(error.response.data.message)
         return {error: error.response.data.message};
     }
+}
 
-    //return;
+export const register = async (name, lastname, email, password) => {
+    try {
+        const res = await api.post(`/auth/register`, {
+            name,
+            lastname,
+            email,
+            password
+        }, {withCredentials: true})
+
+        console.log('Register res:', res);
+
+        if(res.status !== 200) {
+            alert(res.data.message)
+        }
+
+        return {accessToken: res.data.accessToken};
+
+    } catch (error) {
+        return {error: error.response.data.message};
+    }
 }
 
 export const logout = async () => {
@@ -68,8 +88,8 @@ export const refreshToken = async () => {
 
         const res = await api.post(`/auth/refresh_token`, {}, { withCredentials: true })
         
-        console.log(res.data);
-
+        console.log(res);
+        
         if(!res.data.accessToken) return console.log('Something went wrong...')
 
         api.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
