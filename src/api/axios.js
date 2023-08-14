@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseURL = 'http://localhost:8000/api/';
+export const baseURL = 'https://neos-records-api.onrender.com';
 
 export const api = axios.create({
     baseURL
