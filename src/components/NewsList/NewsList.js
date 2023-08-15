@@ -56,7 +56,10 @@ const NewsList = () => {
             className={styles.newsList}
             onMouseLeave={resetNewsItemsOpacity}
         >
-            {content}
+            {
+                content.length > 0 ?
+                content : 'Loading...'
+            }
         </div>
     )
 }
