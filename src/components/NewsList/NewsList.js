@@ -61,7 +61,7 @@ const NewsList = () => {
                 >
                     {content}
                 </div>
-            ) : 'Loading...'
+            ) : <div style={{marginTop: '20px'}}>Loading...</div>
         }
         
         </>
