@@ -51,16 +51,20 @@ const NewsList = () => {
     }
 
     return (
-        <div
-            id="newsList"
-            className={styles.newsList}
-            onMouseLeave={resetNewsItemsOpacity}
-        >
-            {
-                content.length > 0 ?
-                content : 'Loading...'
-            }
-        </div>
+        <>
+        {
+            content.length > 0 ? (
+                <div
+                    id="newsList"
+                    className={styles.newsList}
+                    onMouseLeave={resetNewsItemsOpacity}
+                >
+                    {content}
+                </div>
+            ) : 'Loading...'
+        }
+        
+        </>
     )
 }
 
